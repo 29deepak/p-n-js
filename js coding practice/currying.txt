@@ -1,0 +1,5 @@
+let multiply =function(a,b){
+    console.log(a *b)
+}
+let multiplybyone=multiply.bind(this,2,3)
+multiplybyone()

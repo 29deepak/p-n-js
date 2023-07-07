@@ -1,0 +1,31 @@
+1 2 3 4 
+1 2 3 
+1 2 
+1 
+
+
+
+n=int(input('enter the number'))
+for i in range(1,n+1):
+    for j in range(1,n+2-i):
+        print(j,end=" ")
+    print()
+
+
+
+
+4 4 4 4 
+3 3 3 
+2 2 
+1 
+
+
+
+
+n=int(input('enter the number'))
+num=4
+for i in range(1,n+1):
+    for j in range(1,n+2-i):
+        print(num,end=" ")
+    print()
+    num=num-1

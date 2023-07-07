@@ -1,0 +1,26 @@
+const express = require('express')
+const bodyparser = require('body-parser')
+const bcrypt =require('bcrypt')
+
+const app=express()
+app.use(bodyparser.json())
+
+app.get('/user/:id',async(req,res)=>{
+    console.log(req.params)
+})
+
+app.get('/user',async(req,res)=>{
+    console.log(req.query)
+})
+app.post('/user/dee',async(req,res)=>{
+    let password = req.body.password
+    let saltrounds =10
+   bcrypt.hash(password,saltrounds,(err,hash)=>{
+    console.log({password:hash})
+   })
+})
+app.get('/user/dee',async(req,res)=>{
+    let password=req.body.password
+    bcrypt.compare(password,user[0.password],(err,result))
+})
+app.listen(4000)

@@ -1,0 +1,12 @@
+function add(){
+    console.log("hello")
+}
+add()
+const add2=function(){
+    console.log("world")
+}
+add2()
+const add1=()=>{
+    console.log("i am")
+}
+add1()

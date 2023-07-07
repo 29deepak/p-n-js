@@ -1,0 +1,26 @@
+arr=[5,7,7,8,8,10]
+n=len(arr)
+low=0
+high=n-1
+target=8
+end=-1
+while(low<=high):
+    mid=(low +high)//2
+    if(arr[mid]>target):
+        high=mid-1
+    elif(arr[mid]<target):
+        low=mid+1
+    else:
+        end=mid
+        low=mid+1
+print(end)
+while(low<=high):
+    mid=(low +high)//2
+    if(arr[mid]>target):
+        high=mid-1
+    elif(arr[mid]<target):
+        low=mid+1
+    else:
+        start=mid
+        high=mid-1
+print(start)

@@ -1,0 +1,16 @@
+n=int(input("enter the number"))
+temp=n
+result=n
+i=0
+digit=0
+while n>0:
+    n=n//10
+    i+=1
+while temp>0:
+    ni=temp%10
+    digit=digit + pow(ni,i)
+    temp=temp//10
+if(digit==result):
+    print("arm")
+    else:
+        print("not arm")

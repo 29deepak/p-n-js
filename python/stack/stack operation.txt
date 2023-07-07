@@ -1,0 +1,24 @@
+stack=[]
+def push():
+    n=int(input("enter the element"))
+    stack.append(n)
+def pop():
+    if(len(stack)>0):
+        stack.pop()
+    else:
+        print('nothing is inside the stack')
+def top():
+    a=stack[-1]
+    print(a)
+def display():
+    print(stack)
+while(True):
+    n=int(input('enter the choice'))
+    if(n==1):
+        push()
+    elif(n==2):
+        pop()
+    elif(n==3):
+        top()
+    elif(n==4):
+        display()

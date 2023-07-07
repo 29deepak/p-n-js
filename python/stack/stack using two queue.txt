@@ -1,0 +1,18 @@
+queue1=[]
+queue2=[]
+def push():
+    n=int(input("enter the element"))
+    queue2.append(n)
+    while(queue1):
+        queue2.append(queue1.pop())
+    while(queue2):
+        queue1.append(queue2.pop())
+def display():
+    print(queue1)
+
+while(True):
+    n=int(input("enter the choice"))
+    if(n==1):
+        push()
+    elif(n==2):
+        display()

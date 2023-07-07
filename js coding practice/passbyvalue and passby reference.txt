@@ -1,0 +1,32 @@
+function passByValue(a,b){
+    temp=a
+    a=b
+    b=temp
+    
+    console.log(a,b)
+}
+
+let a=1
+let b=2
+
+console.log("before",a,b)
+
+passByValue(a,b)
+
+console.log("after",a,b)
+
+
+function passByReference(obj){
+    temp=obj.a
+    obj.a=obj.b
+    obj.b=temp
+    
+    console.log(obj.a,obj.b)
+}
+let obj={
+    a:1,
+    b:2
+}
+console.log("before",obj.a,obj.b)
+passByReference(obj)
+console.log("after",obj.a,obj.b)

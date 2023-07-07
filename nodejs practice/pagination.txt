@@ -1,0 +1,16 @@
+const page=1
+const no_of expenses=3
+let total_items;
+Expense.count({where:{userId:req.user.id}}).then((total)=>{
+    total_items=total
+    return Expense.findAll({where:{userId:req.user.id}},offset:(page-1)* no_of expenses,limit:no_of expenses)
+}).then((expenses)=>{
+    const pagination={
+        currentPage:page;
+        hasNextpage:no_of expenses * page<total_items;
+        Nextpage:page+1
+        hasPreviousPage:page>1
+        previousPage:page-1
+        lastPage:Math.ceil(total_items/no_of_expenses)
+    }
+})

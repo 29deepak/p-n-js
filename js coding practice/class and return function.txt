@@ -1,0 +1,18 @@
+class student{
+    constructor(name,age,marks){
+        this.name=name
+        this.age=age
+        this.marks=marks
+
+    }
+    setPlacementAge(minage){
+        return((minmarks)=>{
+            if(this.age> minage && this.marks>minmarks){
+                console.log(this.name +"you are eligible")
+            }
+        })
+    }
+}
+const stu1 = new student('deepak',23,89)
+console.log(stu1)
+stu1.setPlacementAge(18)(40)

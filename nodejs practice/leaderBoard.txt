@@ -1,0 +1,53 @@
+const user=[{
+    id:1,
+    name:"deepak"
+},
+{
+    id:2,
+    name:"kunal"
+},{
+    id:3,
+    name:"xyz"
+}]
+
+const expense=[{
+    id:1,
+    amount:2500,
+    userId:1
+},
+{
+    id:1,
+    amount:500,
+    userId:2
+},{
+    id:2,
+    amount:600,
+    userId:3
+},{
+    id:3,
+    amount:700,
+    userId:1
+},{
+    id:4,
+    amount:800,
+    userId:2
+},{
+    id:5,
+    amount:900,
+    userId:2
+}]
+const expenseamount={}
+expense.forEach((each)=>{
+    if(expenseamount[each.userId]){
+        expenseamount[each.userId] = expenseamount[each.userId] + each.amount
+    }
+    else{
+        expenseamount[each.userId]=each.amount
+    }
+})
+const leaderBoard=[]
+user.forEach((each)=>{
+    leaderBoard.push({name:each.name,total_cost:expenseamount[each.id]})
+})
+leaderBoard.sort((a,b)=>a.total_cost-b.total_cost)
+console.log(leaderBoard)

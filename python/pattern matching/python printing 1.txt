@@ -1,0 +1,16 @@
+p 
+y y 
+t t t 
+h h h h 
+o o o o o 
+n n n n n n 
+> 
+
+
+
+string=input("enter the number")
+n=len(string)
+for i in range(n):
+    for j in range(i+1):
+        print(string[i],end=" ")
+    print()

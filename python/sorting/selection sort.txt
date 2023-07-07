@@ -1,0 +1,7 @@
+arr=[2,1,6,8,9]
+n=len(arr)
+for i in range(n):
+    min_value=min(arr[i:])
+    min_index=arr.index(min_value,i)
+    arr[i],arr[min_index] =arr[min_index],arr[i]
+print(arr)

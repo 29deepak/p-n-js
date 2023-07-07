@@ -1,0 +1,9 @@
+const greek=function(){
+    console.log("hello")
+}
+greek()
+
+
+setTimeout(function(){
+    console.log("world")
+})

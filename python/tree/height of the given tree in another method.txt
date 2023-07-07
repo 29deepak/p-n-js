@@ -1,0 +1,25 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+
+def height(root):
+    if(root==None):
+        return 0
+    left_tree=height(root.left)
+    right_tree=height(root.right)
+    
+    a=1+ max(left_tree,right_tree)
+    return a
+        
+        
+        
+        
+root=Node(1)
+root.left=Node(2)
+root.right=Node(3)
+root.left.left=Node(4)
+root.left.right=Node(5)
+
+print(height(root))

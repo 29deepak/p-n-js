@@ -1,0 +1,14 @@
+const express = require('express')
+const bodyparser = require('body-parser')
+const bcrypt =require('bcrypt')
+const Jwt = require('jsonwebtoken')
+
+const app=express()
+app.use(bodyparser.json())
+
+const encrypt = jwt.sign(name,"secretkey")
+const decrypt = jwt.verify(pases data,"secretkey")
+
+
+
+app.listen(4000)

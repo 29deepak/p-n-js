@@ -1,0 +1,7 @@
+function x(y){
+    console.log("hello")
+    y()
+}
+x(function y(){
+    console.log("world")
+})

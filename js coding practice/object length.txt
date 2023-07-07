@@ -1,0 +1,14 @@
+let obj={
+    a:20,
+    b:30,
+    c:40
+}
+console.log(obj.a)
+let obj1=obj
+console.log(Object.keys(obj))
+let t=Object.keys(obj)
+let sum=0
+for(let i=0;i<Object.keys(obj).length;i++){
+    sum =sum + (obj[t[i]])
+}
+console.log(sum)

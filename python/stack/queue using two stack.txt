@@ -1,0 +1,17 @@
+stack1=[]
+stack2=[]
+def push():
+    n=int(input("enter the element"))
+    while(stack1):
+        stack2.append(stack1.pop())
+    stack2.append(n)
+    while(stack2):
+        stack1.append(stack2.pop())
+def display():
+    print(stack1)
+while(True):
+    n=int(input("enter the choice"))
+    if(n==1):
+        push()
+    elif(n==2):
+        display()

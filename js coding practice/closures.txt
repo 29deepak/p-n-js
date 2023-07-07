@@ -1,0 +1,22 @@
+function x(){
+    var a=10;
+    function y(){
+        console.log(a)
+    }
+    return y
+}
+var z =x()
+z()
+
+
+for(var i=0;i<5;i++){
+    setTimeout(()=>{
+        console.log(i)
+    },2000)
+}
+
+for(let i=0;i<5;i++){
+    setTimeout(()=>{
+        console.log(i)
+    },2000)
+}

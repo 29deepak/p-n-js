@@ -1,0 +1,59 @@
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+class LinkedList:
+    def __init__(self):
+        self.head=None
+    def add_begin(self,data):
+        new_node=Node(data)
+        new_node.next=self.head
+        self.head=new_node
+    def add_end(self,data):
+        new_node=Node(data)
+        n=self.head
+        while n.next is not None:
+            n=n.next
+        n.next = new_node
+    def rotate_ll(self,k):
+        curr = self.head
+        N =1
+        while curr.next:
+            N+=1
+            curr = curr.next
+        curr.next = self.head
+        M = N - k%N
+        i=0
+        curr = self.head
+        while i<M:
+            prev=curr
+            curr=curr.next
+            i+=1
+        prev.next =None
+        self.head = curr
+        return self.head
+    def reverse_ll(self):
+        prev=None
+        curr = self.head
+        while curr is not None:
+            next = curr.next
+            curr.next = prev
+            prev=curr
+            curr=next
+        self.head=prev
+        
+    def print_ll(self):
+        n=self.head
+        while n is not None:
+            print(n.data)
+            n=n.next
+ll1 =LinkedList()
+ll1.add_begin(50)
+ll1.add_begin(40)
+ll1.add_begin(30)
+ll1.add_begin(20)
+ll1.add_begin(10)
+ll1.print_ll()
+# ll1.rotate_ll(2)
+ll1.reverse_ll()
+ll1.print_ll()

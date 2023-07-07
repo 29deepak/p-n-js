@@ -1,0 +1,11 @@
+let name={
+    firstname:'deepak',
+    lastname:'kumar'
+}
+printFullname=function(home,state){
+    console.log(this.firstname + " " + this.lastname +" " + home + " " + state)
+}
+printFullname.call(name,'mfp','bihar')
+printFullname.apply(name,['del','delh'])
+let prinint =printFullname.bind(name,'del','mumbai')
+prinint()

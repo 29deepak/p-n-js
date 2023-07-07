@@ -1,0 +1,15 @@
+string=input("enter the string")
+stack=[]
+map={')':'(','}':'{',']':'['}
+# print(map.get('}'))
+for i in string:
+    if( i not in map.keys()):
+        stack.append(i)
+    elif(stack[-1]==map.get(i)):
+        stack.pop()
+    else:
+        stack.append(i)
+if(len(stack)==0):
+    print("true")
+else:
+    print("false")

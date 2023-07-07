@@ -1,0 +1,56 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+        
+def maxValue(root):
+    if(root==None):
+        return 0
+    leftMax = maxValue(root.left)
+    rightMax= maxValue(root.right)
+    value=0
+    if(leftMax > rightMax):
+        value=leftMax
+    else:
+        value=rightMax
+    if (value < root.data):
+        value = root.data
+    return value
+def minValue(root):
+    if(root==None):
+        return 1000000000
+    leftMin=minValue(root.left)
+    rightMin = minValue(root.right)
+    value=0
+    if(leftMin < rightMin):
+        value=leftMin
+    else:
+        value=rightMin
+    if (value > root.data):
+        value = root.data
+    return value
+        
+def isBST(root):
+    if(root==None):
+        return True
+    if(root.left is not None and maxValue(root.left) > root.data):
+        return False
+    if(root.right is not None and minValue(root.right) < root.data):
+        return False
+    if(isBST(root.left) is False or isBST(root.right) is False):
+        return False
+    return True
+    
+
+
+root = Node(4)
+root.left = Node(2)
+root.right = Node(5)
+# root.right.left = Node(7)
+root.left.left = Node(1)
+root.left.right = Node(3)
+if isBST(root) is True:
+  print("Is BST")
+else:
+  print("Not a BST")

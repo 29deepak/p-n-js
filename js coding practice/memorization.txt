@@ -1,0 +1,12 @@
+let cache={}
+function add(num){
+    if(cache[num]){
+        return cache[num]
+    }
+    else{
+        cache[num]=num +10
+        return cache[num]
+    }
+}
+
+console.log(add(20))

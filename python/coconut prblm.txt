@@ -1,0 +1,13 @@
+
+def maxDrinks(num_coconuts,num_empty_shells):
+    fullCoconuts=num_coconuts
+    emptycoconuts=0
+    totalDranks=0
+    while(fullCoconuts >0):
+        totalDranks +=fullCoconuts
+        emptycoconuts +=fullCoconuts
+        fullCoconuts=emptycoconuts//num_empty_shells
+        emptycoconuts %=num_empty_shells
+    return totalDranks
+    
+print(maxDrinks(15,4))

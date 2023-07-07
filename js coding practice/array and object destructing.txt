@@ -1,0 +1,13 @@
+let obj={
+    name:'js',
+    course:'python'
+}
+var{course,name} =obj
+console.log(course)
+console.log(name)
+
+
+
+let arr =['true','fdhd']
+const[x,y] =arr
+console.log(x)

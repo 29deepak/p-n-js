@@ -1,0 +1,6 @@
+function  * generator(){
+    yield "first";
+    yield "second";
+}
+let g1 =generator()
+console.log(g1.next())

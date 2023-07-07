@@ -1,0 +1,9 @@
+n=int(input())
+for x in range(0,n):
+    for i in range(n-x):
+        print("*",end="")
+    for j in range(x):
+        print(" ",end=" ")
+    for k in range(n-x):
+        print("*",end="")
+    print()

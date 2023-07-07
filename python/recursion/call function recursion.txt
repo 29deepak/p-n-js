@@ -1,0 +1,17 @@
+def printc(n):
+    if(n==0):
+        return 1
+    else:
+        print(n)
+        printc(n-1)
+printc(5)
+
+
+
+def printc(n):
+    if(n==0):
+        return 1
+    else:
+        printc(n-1)
+        print(n)
+printc(5)

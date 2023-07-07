@@ -1,0 +1,13 @@
+const arr1= new Promise((res,rej)=>{
+    if(true){
+    res('c')
+    }
+    else{
+        rej('c')
+    }
+})
+arr1.then((r)=>{
+    console.log(r)
+}).catch((err)=>{
+    console.log(err)
+})

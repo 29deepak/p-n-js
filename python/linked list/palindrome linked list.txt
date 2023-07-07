@@ -1,0 +1,38 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+
+def ispalindrome(head):
+    
+    current = head
+    isplain=True
+    stack=[]
+    while current is not None:
+        stack.append(current.data)
+        current = current.next
+    print(stack)
+    while head is not None:
+        i=stack.pop()
+        if(head.data==i):
+            ispalin =True
+        else:
+            isplain=False
+            break
+        head=head.next
+    
+    return isplain
+
+
+
+one =Node(1)
+two=Node(2)
+three =Node(2)
+four=Node(1)
+
+one.next=two
+two.next=three
+three.next=four
+four.next=None
+
+print(ispalindrome(one))
