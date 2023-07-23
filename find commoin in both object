@@ -1,0 +1,21 @@
+const input1={a:1,b:2,c:3,d:10,e:12}
+const input2={a:2,e:12,f:6,d:10}
+console.log(input1["a"])
+let key1 =Object.keys(input1)
+let key2=Object.keys(input2)
+console.log(key1,key2)
+let arr=[]
+for(let i=0;i<key1.length;i++){
+    if(key2.includes(key1[i])){
+        arr.push(key1[i])
+    }
+}
+
+let b= arr.filter(x=>input1[x] ===input2[x])
+console.log(b)
+
+let obj={}
+for (let i=0;i<b.length;i++){
+    obj[b[i]]=input2[b[i]]
+}
+console.log(obj)
